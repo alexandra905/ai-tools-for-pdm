@@ -1,0 +1,151 @@
+:root {
+  color: #1d2939;
+  background: #f5f7fb;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  width: min(100% - 32px, 960px);
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+.intro {
+  color: #526075;
+}
+
+.date {
+  margin: 32px 0 8px;
+  color: #526075;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status {
+  min-height: 24px;
+  margin-bottom: 16px;
+  color: #16764b;
+}
+
+.status--error {
+  color: #b42318;
+}
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.feeding {
+  margin-top: 40px;
+  max-width: 480px;
+}
+
+.feeding__card {
+  border: 2px solid #adc8ec;
+  border-radius: 12px;
+  padding: 20px;
+  background: #f4f8ff;
+}
+
+.feeding__info {
+  min-height: 24px;
+  margin-bottom: 16px;
+}
+
+.slot {
+  border: 2px solid;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.slot--free {
+  border-color: #67b789;
+  background: #f1fff6;
+}
+
+.slot--booked {
+  border-color: #aeb9ca;
+  background: #f1f4f8;
+}
+
+.slot__time {
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.slot__state {
+  min-height: 24px;
+  margin-bottom: 16px;
+}
+
+.booking-form {
+  display: grid;
+  gap: 8px;
+}
+
+.booking-form__label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.booking-form input,
+.booking-form__button {
+  min-height: 44px;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.booking-form input {
+  width: 100%;
+  border: 1px solid #7f8da3;
+  padding: 8px 12px;
+}
+
+.booking-form__button {
+  border: 0;
+  padding: 8px 16px;
+  color: #ffffff;
+  background: #126b42;
+  cursor: pointer;
+}
+
+.booking-form__button:hover:not(:disabled) {
+  background: #0d5635;
+}
+
+.booking-form__button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+@media (max-width: 480px) {
+  .page {
+    width: min(100% - 24px, 960px);
+    padding: 28px 0;
+  }
+
+  .slots {
+    grid-template-columns: 1fr;
+  }
+}

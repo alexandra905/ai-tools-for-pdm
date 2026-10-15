@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кто выгуливает Бориса</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <h1>Кто выгуливает Бориса</h1>
+      <p class="intro">Выберите свободное время для прогулки с Борисом.</p>
+
+      <section aria-labelledby="walks-title">
+        <p id="current-date" class="date" aria-live="polite">Загружаем дату…</p>
+        <h2 id="walks-title">Прогулки</h2>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <div id="slots" class="slots" aria-live="polite"></div>
+      </section>
+
+      <section class="feeding" aria-labelledby="feeding-title">
+        <h2 id="feeding-title">Последнее кормление</h2>
+        <div class="feeding__card">
+          <p id="feeding-info" class="feeding__info" aria-live="polite">Загружаем информацию…</p>
+          <form id="feeding-form" class="booking-form">
+            <label class="booking-form__label" for="feeding-employee-name">ФИО сотрудника</label>
+            <input
+              id="feeding-employee-name"
+              name="employeeName"
+              type="text"
+              autocomplete="name"
+              required
+              placeholder="Илья Примеров"
+            >
+            <button class="booking-form__button" type="submit">Отметить кормление</button>
+          </form>
+        </div>
+        <p id="feeding-status" class="status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
